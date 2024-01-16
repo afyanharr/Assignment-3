@@ -79,11 +79,13 @@ function arrSum(arr) {
     }
 
     return [arr.slice(start, end + 1), maxSoFar];
+
 }
 
 
 const inputArray = [-2, -3, 4, -1, -2, 1, 5, -3];
 const [maxSubarray, maxSum] = arrSum(inputArray);
+const result = [];
+result.push(maxSubarray, maxSum);
 
-console.log("Subarray:", maxSubarray, "==> Number4");
-console.log("Sum:", maxSum,"==> Number4");
+console.log(result, "==> Number4");

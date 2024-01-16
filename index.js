@@ -57,23 +57,23 @@ console.log(hasilPasangan,"==> Number3");
 //number4
 
 function arrSum(arr) {
-    let maxEndingHere = arr[0];
+    let max = arr[0];
     let maxSoFar = arr[0];
     let start = 0;
     let end = 0;
-    let tempStart = 0;
+    let temp = 0;
 
     for (let i = 1; i < arr.length; i++) {
-        if (arr[i] > maxEndingHere + arr[i]) {
-            maxEndingHere = arr[i];
-            tempStart = i;
+        if (arr[i] > max + arr[i]) {
+            max = arr[i];
+            temp = i;
         } else {
-            maxEndingHere = maxEndingHere + arr[i];
+            max = max + arr[i];
         }
 
-        if (maxEndingHere > maxSoFar) {
-            maxSoFar = maxEndingHere;
-            start = tempStart;
+        if (max > maxSoFar) {
+            maxSoFar = max;
+            start = temp;
             end = i;
         }
     }
